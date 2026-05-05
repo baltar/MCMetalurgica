@@ -1,2 +1,2 @@
 # MCMetalurgica
-Projeto desenvolvido como freelancer para a MC Metalúrgica.
+Projeto em desenvolvimento como freelancer para a MC Metalúrgica.
