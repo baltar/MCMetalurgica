@@ -1,0 +1,875 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.header-top {
+  background-color: #1A2F6E;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  height: 150px;
+  width: 150pxx;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #CC2B2B;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #CC2B2B;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* HERO AQUI, CONTEÚDO MAIN DO SITE */
+.hero {
+  background-color: #1a1a1a;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-titulo {
+  font-size: 52px;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  min-height: 180px;
+}
+
+.hero-titulo span {
+  color: #CC2B2B;
+}
+
+.hero-subtitulo {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.hero-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-imagem img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #CC2B2B;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.btn-hero:hover::after {
+  transform: translateX(0);
+}
+
+.btn-hero:hover {
+  box-shadow: 0 8px 24px rgba(204, 43, 43, 0.5);
+  transform: translateY(-2px);
+}
+
+
+
+/* INICIO DOS CARDS DE DESTAQUE */
+.produtos-destaque {
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.produtos-destaque h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  font-size: 16px;  
+  color: #666;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #1a1a1a;
+  padding: 20px 20px 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 20px 24px;
+  line-height: 1.6;
+}
+
+/* SEÇÃO DO SOBRE NÓS */
+
+.sobre-resumo {
+  padding: 80px 60px;
+  background-color: #fff;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.btn-sobre {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 36px;
+  background-color: transparent;
+  color: #CC2B2B;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 2px solid #CC2B2B;
+  transition: all 0.3s ease;
+}
+
+.btn-sobre:hover {
+  background-color: #CC2B2B;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 43, 43, 0.4);
+}
+
+.sobre-imagem {
+  flex: 1;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 380px;
+  background-color: #ddd;
+}
+
+
+/* CTA */
+.cta {
+  background-color: #CC2B2B;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 36px;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 16px 48px;
+  background-color: #fff;
+  color: #CC2B2B;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: transparent;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+/* FIM DO CTA */
+
+/* FOOTER */
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 60px 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-logo img {
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-links h4,
+.footer-contato h4 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  color: #CC2B2B;
+}
+
+.footer-contato p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 13px;
+  color: #666;
+}
+.footer-contato i {
+  margin-right: 8px;
+  color: #CC2B2B;
+}
+
+.footer-links i {
+  margin-right: 8px;
+  color: #CC2B2B;
+}
+
+/* FIM DO FOOTER */
+
+
+/* HOVER DO WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 100px;
+  height: 100px;
+}
+
+/* CURSOR PISCANDO */
+
+.cursor {
+  animation: piscar 0.8s infinite;
+  color: #CC2B2B;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* PAGINA QUEM SOMOS */
+
+/* BANNER */
+.page-banner {
+  background-color: #1a1a1a;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-banner-content h1 {
+  font-size: 52px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.page-banner-content p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* HISTÓRIA */
+.historia {
+  padding: 80px 60px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.historia-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+.historia-texto h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.historia-texto p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.historia-imagem {
+  flex: 1;
+}
+
+.historia-imagem img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 380px;
+}
+
+/* NÚMEROS */
+.numeros {
+  background-color: #1A2F6E;
+  padding: 60px;
+}
+
+.numeros-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.numero-item i {
+  font-size: 36px;
+  color: #CC2B2B;
+  margin-bottom: 12px;
+}
+
+.numero-valor {
+  display: block;
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.numero-item p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* DIFERENCIAIS */
+.diferenciais {
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.diferenciais h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.diferencial-item {
+  background-color: #fff;
+  padding: 36px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #CC2B2B;
+}
+
+.diferencial-item i {
+  font-size: 36px;
+  color: #CC2B2B;
+  margin-bottom: 16px;
+}
+
+.diferencial-item h3 {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.diferencial-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* MISSÃO VISÃO VALORES */
+.mvv {
+  padding: 80px 60px;
+  background-color: #1a1a1a;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mvv-item {
+  text-align: center;
+  padding: 40px 24px;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.mvv-item i {
+  font-size: 36px;
+  color: #CC2B2B;
+  margin-bottom: 16px;
+}
+
+.mvv-item h3 {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mvv-item p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* HOVER DOS CARDS */
+
+.card,
+.diferencial-item,
+.mvv-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.diferencial-item:hover,
+.mvv-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* ABA PRODUTOS */
+
+/* PRODUTOS PÁGINA */
+.produtos-pagina {
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.produto-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+.produto-info {
+  padding: 24px;
+}
+
+.produto-info h3 {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.produto-info p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.btn-produto {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-produto:hover {
+  background-color: #1ebe59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.btn-produto i {
+  margin-right: 6px;
+}
+
+/* FIM PRODUTOS */
+
+
+/* CONTATO */
+
+/* CONTATO */
+.contato-section {
+  padding: 80px 60px;
+  background-color: #fff;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contato-formulario h2,
+.contato-info h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.contato-formulario p,
+.contato-info > p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.form-grupo {
+  margin-bottom: 20px;
+}
+
+.form-grupo label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #333;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+  border-color: #CC2B2B;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  background-color: #CC2B2B;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #a82222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 43, 43, 0.4);
+}
+
+.btn-enviar i {
+  margin-right: 8px;
+}
+
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.info-item i {
+  font-size: 22px;
+  color: #CC2B2B;
+  margin-top: 2px;
+  width: 24px;
+}
+
+.info-item h4 {
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.info-item a {
+  color: #CC2B2B;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+/* MAPA */
+.mapa-section {
+  line-height: 0;
+}
+
+/* FIM DO CONTATO */
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.1);
+  filter: drop-shadow(0 8px 16px rgba(37, 211, 102, 0.5));
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
